@@ -3,7 +3,6 @@ import time
 import pyautogui
 import keyboard
 
-# Capture images using PyAutoGUI
 def capture_images(save_dir, interval=0.033):
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
