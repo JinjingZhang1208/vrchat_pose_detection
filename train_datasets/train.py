@@ -3,7 +3,6 @@ from IPython import display
 from ultralytics import YOLO
 from roboflow import Roboflow
 
-# Specify the correct path to the YOLOv8 model weights
 model_path = 'C:/Users/andyma/Documents/vrchat_pose_detection/train_datasets/yolov8n.pt'
 
 # Load the YOLO model
@@ -11,11 +10,11 @@ model = YOLO(model_path)
 
 # Initialize Roboflow
 rf = Roboflow(api_key="eW43mQoE4D7QBLaccpat")
-project = rf.workspace("annazhang1208").project("vr_pose")
+project = rf.workspace("annazhang1208").project("vr_pose_avatars")
 version = project.version(1)
 dataset = version.download("yolov5")
 
-# Correct dataset path
+# dataset path
 data_path = 'C:/Users/andyma/Documents/vrchat_pose_detection/train_datasets/vr_pose-1/data.yaml'
 
 # Verify dataset location

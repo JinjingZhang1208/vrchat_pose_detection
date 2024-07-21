@@ -7,7 +7,6 @@ import numpy as np
 from datetime import datetime
 from ultralytics import YOLO
 
-# Directory containing screenshots
 screenshot_dir = 'captured_images'
 
 def clear_images_directory(directory):
@@ -68,7 +67,7 @@ def monitor_images(screenshot_dir):
                     yolo_results = model(frame)[0]
                     detections = yolo_results.boxes  # Accessing boxes from YOLOv8 results
                     
-                    # Debug: Print detections
+                    # Print detections
                     print("YOLO Detections:")
                     for box in detections:
                         x1, y1, x2, y2 = box.xyxy[0].tolist()
@@ -107,7 +106,7 @@ def monitor_images(screenshot_dir):
                                                       mp_drawing.DrawingSpec(color=(245,117,66), thickness=2, circle_radius=2), 
                                                       mp_drawing.DrawingSpec(color=(245,66,230), thickness=2, circle_radius=2))
                         
-                        # Render YOLO detections but don't print to terminal
+                        # Render YOLO detections 
                         for box in detections:
                             x1, y1, x2, y2 = box.xyxy[0]
                             conf = box.conf[0]

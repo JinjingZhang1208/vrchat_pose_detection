@@ -1,0 +1,12 @@
+names:
+- human
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: vr_pose_avatars
+  url: https://universe.roboflow.com/annazhang1208/vr_pose_avatars/dataset/1
+  version: 1
+  workspace: annazhang1208
+test: ../test/images
+train: vr_pose_avatars-1/train/images
+val: vr_pose_avatars-1/valid/images
